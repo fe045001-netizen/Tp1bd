@@ -1,21 +1,21 @@
-CREATE DATABASE testdb
+CREATE DATABASE testdbb
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
-  USE testdb;
-CREATE TABLE utilisateur (
+  USE testdbb;
+CREATE TABLE users (
   id    INT AUTO_INCREMENT PRIMARY KEY,
   nom   VARCHAR(50) NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE
 ) ENGINE=InnoDB;
-INSERT INTO utilisateur (nom, email) VALUES
-  ('Alice', 'alice@example.com'),
-  ('Bob',   'bob@example.com');
-  SELECT * FROM utilisateur;
+INSERT INTO users (nom, email) VALUES
+  ('Omar', 'omar@example.com'),
+  ('safaa',   'safaa@example.com');
+  SELECT * FROM users;
   SELECT nom, email
-FROM utilisateur
+FROM users
 WHERE email LIKE '%@example.com';
 SELECT COUNT(*) AS total
-FROM utilisateur
+FROM users 
 HELP;
-DROP TABLE utilisateur;
-DROP DATABASE testdb;
+DROP TABLE users;
+DROP DATABASE testdbb;
